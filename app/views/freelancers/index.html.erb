@@ -1,0 +1,21 @@
+<h3> FREELANCERS INDEX </h3>
+
+<p><%= link_to 'Enter a new freelancer', new_freelancer_path %></p>
+
+<form action="<%= searchresults_freelancers_path %>" method="get">
+	<label for="">Search for</label>
+	<input name="searchterm" type="text">
+	<input type="submit">
+</form>
+
+<%= will_paginate @freelancers %>
+
+<% @freelancers.each do |t| %>
+	<p><%= link_to t.name, freelancer_path(t) %> <br>
+		<%= link_to 'Edit', edit_freelancer_path(t) %> |
+		<%= link_to 'Delete', t, method: :delete, data: { confirm: "You sure, Jimmy?" } %>
+
+	</p>
+
+
+<% end %>

@@ -1,0 +1,14 @@
+<h2> SEARCHRESULTS </h2>
+
+
+
+<p> You searched for:</p>
+
+<%= @searchterm %>
+<hr>
+<% @results.each do |t| %>
+	<p><%= link_to t.name, freelancer_path(t) %></p>
+	<p> <%= t.description %> </p>
+<% end %>
+
+<p> The search returned this number of results: <%= @results.count %> </p>
