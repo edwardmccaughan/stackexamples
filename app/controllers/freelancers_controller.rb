@@ -1,6 +1,6 @@
 class FreelancersController < ApplicationController 
   before_action :set_freelancer, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 	def index
 		@freelancers = Freelancer.paginate(page: params[:page], :per_page => 3)
 	end
