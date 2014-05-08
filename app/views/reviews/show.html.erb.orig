@@ -2,7 +2,11 @@
 
 <p>
   <strong>Author:</strong>
+<<<<<<< HEAD
+  <%= @review.author.downcase %>
+=======
   <%= @review.author.upcase %>
+>>>>>>> FETCH_HEAD
 </p>
 
 <p>
