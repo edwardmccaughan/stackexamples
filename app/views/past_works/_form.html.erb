@@ -1,0 +1,25 @@
+<%= form_for([@freelancer,@past_work]) do |f| %>
+  <% if @past_work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@past_work.errors.count, "error") %> prohibited this past_work from being saved:</h2>
+
+      <ul>
+      <% @past_work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

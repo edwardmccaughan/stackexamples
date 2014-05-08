@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505122500) do
+ActiveRecord::Schema.define(version: 20140507091408) do
 
   create_table "freelancers", force: true do |t|
     t.string   "name"
@@ -25,10 +25,27 @@ ActiveRecord::Schema.define(version: 20140505122500) do
     t.datetime "updated_at"
   end
 
+  create_table "past_works", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "freelancer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
     t.boolean  "featured"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.string   "author"
+    t.text     "body"
+    t.integer  "score"
+    t.integer  "freelancer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

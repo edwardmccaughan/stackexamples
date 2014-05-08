@@ -1,0 +1,27 @@
+<h1>Listing past_works</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @past_works.each do |past_work| %>
+      <tr>
+        <td><%= past_work.name %></td>
+        <td><%= past_work.description %></td>
+        <td><%= link_to 'Show', past_work %></td>
+        <td><%= link_to 'Edit', edit_past_work_path(past_work) %></td>
+        <td><%= link_to 'Destroy', past_work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Past work', new_past_work_path %>

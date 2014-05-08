@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+
   resources :posts
 
   get "homepage" => "pages#homepage"
@@ -9,6 +11,9 @@ Rails.application.routes.draw do
   get "contact" => "pages#contact"
 
   resources :freelancers do
+    resources :reviews
+    resources :past_works
+    
   	collection do
   		get :searchresults
   	end

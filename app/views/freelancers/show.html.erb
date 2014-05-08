@@ -1,5 +1,25 @@
 <h3><%= @freelancer.name %> </h3>
 
-<p>  </p>
+<hr>
+
+<% @freelancer.reviews.each do |review| %>
+<p>
+  <div> <%= review.author %> </div>
+  <div> <%= review.body %> </div>
+  <div> <%= review.score %> </div>
+</p>
+<% end %>
+
+
+<hr>
+<% @freelancer.past_works.each do |work| %>
+<p>
+  <div> <%= work.name %> </div>
+  <div> <%= work.description %> </div>
+</p>
+<% end %>
 
 <%= link_to 'Edit Freelancer', edit_freelancer_path(@freelancer) %>
+<div>
+  <%= link_to " add new review", new_freelancer_review_path(@freelancer) %> 
+</div>
