@@ -5,6 +5,7 @@
 <% @freelancer.reviews.each do |review| %>
 <p>
   <div> <%= review.author %> </div>
+  <div> <%= review.user.email %> </div>  
   <div> <%= review.body %> </div>
   <div> <%= review.score %> </div>
 </p>
