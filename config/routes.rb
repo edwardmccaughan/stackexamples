@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
 
+  devise_for :users
   resources :posts
 
   get "homepage" => "pages#homepage"
@@ -21,5 +22,7 @@ Rails.application.routes.draw do
   		get :summary
   	end
   end
+
+  root "pages#homepage"
  
 end

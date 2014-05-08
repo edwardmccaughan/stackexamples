@@ -1,10 +1,7 @@
 <h2> HOMEPAGE </h2>
 <img src="288.jpg" alt="cute_kitten">
 <p>
-	<%= @featured_post.title %>
 	<%= link_to @featured_post.title, post_path(@featured_post) %>
 
-	<%= link_to @featured_post.title, "/posts/3" %>
-
-	<%= link_to @featured_post.title, edit_post_path(@featured_post) %>
+	<%= link_to 'Edit', edit_post_path(@featured_post) %>
 </p>
