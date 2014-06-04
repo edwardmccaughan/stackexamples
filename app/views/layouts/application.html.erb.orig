@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/other_styles.css">
+<<<<<<< HEAD
+  <title>NOthing</title>
+=======
+  <title>ExercisesGeneric are awesome</title>
+>>>>>>> 8a8dcc90c10486cdb1a04bb298a3c9690ca52316
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+
+<<<<<<< HEAD
+<h1> Jonas is  </h1>
+=======
+<h1> Jonas is really sortof Awesome </h1>
+>>>>>>> 8a8dcc90c10486cdb1a04bb298a3c9690ca52316
+<h1> Felix is also Really Really Awesome</h1>
+
+
+<%= render '/layouts/header' %>
+
+<%= yield %>
+
+<<<<<<< HEAD
+<%= render '/layouts/footie' %>
+=======
+<%= render '/layouts/footer2' %>
+>>>>>>> 8a8dcc90c10486cdb1a04bb298a3c9690ca52316
+
+</body>
+</html>
