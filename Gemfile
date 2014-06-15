@@ -33,6 +33,7 @@ group :test do
   gem 'syntax'
   gem 'factory_girl_rails'
   gem 'email_spec', require: false
+  gem "webrat"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
